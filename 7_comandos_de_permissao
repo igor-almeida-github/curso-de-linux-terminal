@@ -1,0 +1,69 @@
+ls -l -> Lista com detalhes
+-----------------EX----------------------------------------
+igor@igor-PC:~$ ls -l
+total 32
+drwxr-xr-x 2 igor igor 4096 jan 24 03:04 'Área de Trabalho'
+drwxr-xr-x 3 igor igor 4096 jan 24 17:31  Documentos
+drwxr-xr-x 2 igor igor 4096 jan 24 03:57  Downloads
+drwxr-xr-x 2 igor igor 4096 jan 24 03:04  Imagens
+drwxr-xr-x 2 igor igor 4096 jan 24 03:04  Modelos
+drwxr-xr-x 2 igor igor 4096 jan 24 03:04  Música
+drwxr-xr-x 2 igor igor 4096 jan 24 03:04  Público
+drwxr-xr-x 2 igor igor 4096 jan 24 03:04  Vídeos
+-----------------------------------------------------------
+	  1* 	 | usuário | grupo | Bytes | última alteração | Pasta
+drwxr-xr-x 2 |  igor   | igor  | 4096  | jan 24 03:04     | Vídeos
+-----------------------------------------------------------
+1* drwxr-xr-x 2
+    d       | rwx  |r-x  |r-x                |2
+diretório   | dono |grupo|outros             |
+OBS (- file)|(r read) (w write) (x execute)  |
+***********************************************************
+
+
+usuário igor pode ler e escrever
+------------------------Ex---------------------------------
+igor@igor-PC:~/Downloads$ echo "linux" >> geek.txt
+igor@igor-PC:~/Downloads$ cat geek.txt
+linux
+igor@igor-PC:~/Downloads$
+
+
+chmod *** arquivo-> (change mode) (*/*/* -> dono/grupo/outros) (* - Soma)
+Muda a permissão sobre o arquivo. 
+r - 4 (100)
+w - 2 (010)
+x - 1 (001)
+----------------------------------Ex-----------------------------------------
+igor@igor-PC:~/Downloads$ ls -l
+total 8
+-rw-rw-r-- 1 igor igor 0 jan 25 23:53 geek.txt
+igor@igor-PC:~/Downloads$ chmod 444 geek.txt
+igor@igor-PC:~/Downloads$ ls -l
+total 12
+-r--r--r-- 1 igor igor 6 jan 26 00:03 geek.txt
+igor@igor-PC:~/Downloads$ cat geek.txt
+linux
+igor@igor-PC:~/Downloads$ echo "oi" >> geek.txt
+bash: geek.txt: Permissão negada
+******************************************************************************
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,77 @@
+cat /proc/cpuinfo -> Informações do CPU
+-----------------------------------Ex----------------------------------------------
+igor@igor-PC:~$ cat /proc/cpuinfo
+processor	: 0
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 158
+model name	: Intel(R) Core(TM) i7-7700HQ CPU @ 2.80GHz
+stepping	: 9
+microcode	: 0xde
+cpu MHz		: 900.026
+cache size	: 6144 KB
+physical id	: 0
+.
+.
+.
+************************************************************************************
+
+
+cat /proc/meminfo -> Informações da memória
+------------------------------------Ex----------------------------------------------
+igor@igor-PC:~/Downloads$ cat /proc/meminfo
+MemTotal:       16277228 kB
+MemFree:         1585552 kB
+MemAvailable:   13860176 kB
+Buffers:          716788 kB
+Cached:         10873988 kB
+SwapCached:            0 kB
+Active:          4793216 kB
+Inactive:        7685004 kB
+Active(anon):    1231684 kB
+Inactive(anon):   143780 kB
+.
+.
+.
+*************************************************************************************
+
+
+free -> Mostra utilização de memória e memória virtual
+------------------------------------Ex----------------------------------------------
+igor@igor-PC:~/Downloads$ free
+              total       usada       livre    compart.  buff/cache  disponível
+Mem.:      16277228     1650380     1541604      491972    13085244    13792764
+Swap:       2097148           0     2097148
+*************************************************************************************
+
+
+du -h -> Mostra o tamanho dos arquivos em um diretório de uma forma humana (h -> human)
+------------------------------------Ex-----------------------------------------------
+igor@igor-PC:~/Downloads$ du -h
+24K	.
+*************************************************************************************
+
+
+df -> Mostra o uso do disco
+------------------------------------Ex-----------------------------------------------
+igor@igor-PC:~/Downloads$ df
+Sist. Arq.          Blocos de 1K    Usado Disponível Uso% Montado em
+udev                     8092108        0    8092108   0% /dev
+tmpfs                    1627724     1712    1626012   1% /run
+/dev/nvme0n1p2         238798492 13091628  213506828   6% /
+tmpfs                    8138612    95272    8043340   2% /dev/shm
+tmpfs                       5120        4       5116   1% /run/lock
+tmpfs                    8138612        0    8138612   0% /sys/fs/cgroup
+/dev/nvme0n1p1            523248     7984     515264   2% /boot/efi
+tmpfs                    1627720       64    1627656   1% /run/user/1000
+/home/igor/.Private    238798492 13091628  213506828   6% /home/igor
+/dev/sda1             1921802432 13879304 1810231072   1% /run/timeshift/backup
+**************************************************************************************
+
+
+uname -a -> Mostra o nome do kernel
+--------------------------------------Ex----------------------------------------------
+igor@igor-PC:~/Downloads$ uname -a
+Linux igor-PC 5.4.0-64-generic #72-Ubuntu SMP Fri Jan 15 10:27:54 UTC 2021 x86_64 x86_64 x86_64 GNU/Linux
+**************************************************************************************
+

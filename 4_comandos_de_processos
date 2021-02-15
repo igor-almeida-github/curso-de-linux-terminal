@@ -1,0 +1,48 @@
+ps -> Mostra todos os processos abertos no momento
+-----------------------Ex----------------------------
+igor@igor-PC:~/Downloads$ ps
+    PID TTY          TIME CMD
+  31853 pts/0    00:00:00 bash
+  38668 pts/0    00:00:00 ps
+
+
+ps aux -> Mostra não somente os processos simples, mas mostra também os auxiliares 
+-----------------------------------Ex---------------------------------------------
+igor@igor-PC:~$ ps aux
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root           1  0.0  0.0 168840 12740 ?        Ss   13:34   0:01 /sbin/init splash
+root           2  0.0  0.0      0     0 ?        S    13:34   0:00 [kthreadd]
+root           3  0.0  0.0      0     0 ?        I<   13:34   0:00 [rcu_gp]
+root           4  0.0  0.0      0     0 ?        I<   13:34   0:00 [rcu_par_gp]
+root           6  0.0  0.0      0     0 ?        I<   13:34   0:00 [kworker/0:0H-events_highpri]
+root           9  0.0  0.0      0     0 ?        I<   13:34   0:00 [mm_percpu_wq]
+root          10  0.0  0.0      0     0 ?        S    13:34   0:00 [ksoftirqd/0]
+root          11  0.1  0.0      0     0 ?        I    13:34   0:06 [rcu_sched]
+.
+.
+.
+***********************************************************************************
+
+
+kill -> Mata um processo
+-----------------------------------Ex----------------------------------------------
+igor@igor-PC:~$ kill 9964
+***********************************************************************************
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

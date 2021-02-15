@@ -1,0 +1,265 @@
+ls -l -> Lista com detalhes
+-----------------EX----------------------------------------
+igor@igor-PC:~$ ls -l
+total 32
+drwxr-xr-x 2 igor igor 4096 jan 24 03:04 'Área de Trabalho'
+drwxr-xr-x 3 igor igor 4096 jan 24 17:31  Documentos
+drwxr-xr-x 2 igor igor 4096 jan 24 03:57  Downloads
+drwxr-xr-x 2 igor igor 4096 jan 24 03:04  Imagens
+drwxr-xr-x 2 igor igor 4096 jan 24 03:04  Modelos
+drwxr-xr-x 2 igor igor 4096 jan 24 03:04  Música
+drwxr-xr-x 2 igor igor 4096 jan 24 03:04  Público
+drwxr-xr-x 2 igor igor 4096 jan 24 03:04  Vídeos
+-----------------------------------------------------------
+	  1* 	 | usuário | grupo | Bytes | última alteração | Pasta
+drwxr-xr-x 2 |  igor   | igor  | 4096  | jan 24 03:04     | Vídeos
+-----------------------------------------------------------
+1* drwxr-xr-x 2
+    d       | rwx  |r-x  |r-x                |2
+diretório   | dono |grupo|outros             |
+OBS (- file)|(r read) (w write) (x execute)  |
+***********************************************************
+
+
+ls -la -> mostra arquivos e diretório, além do conteúdo dentro deles.
+-------------------Ex-------------------------------------------------
+igor@igor-PC:~$ ls -la
+total 224
+drwx------ 21 igor igor  4096 jan 24 14:56  .
+drwxr-xr-x  4 root root  4096 jan 24 03:01  ..
+drwxr-xr-x  2 igor igor  4096 jan 24 03:04 'Área de Trabalho'
+-rw-------  1 igor igor   107 jan 24 16:37  .bash_history
+-rw-r--r--  1 igor igor   220 jan 24 03:01  .bash_logout
+-rw-r--r--  1 igor igor  3771 jan 24 03:01  .bashrc
+drwxr-xr-x 15 igor igor  4096 jan 24 04:03  .cache
+                      .
+                      .
+                      .
+-----------------------------------------------------------------------
+- -> arquivo
+d -> diretório
+************************************************************************
+
+
+cd -> (change directory) 
+OBS: Pressionar 1 Tab auto-completa o nome caso haja somente uma possibilidade
+OBS: Pressionar 2 Tab lista todas as possíveis opções para auto-completar
+---------------------------Ex-------------------------------------------------
+igor@igor-PC:~$ cd Downloads/
+igor@igor-PC:~/Downloads$
+*******************************************************************************
+
+
+cd .. -> Muda para o diretório anterior (antes da /)
+--------------------------Ex---------------------------------------------------
+igor@igor-PC:~/Downloads$ cd ..
+igor@igor-PC:~$ 
+*******************************************************************************
+
+
+cd ~ -> Muda para a pasta pessoal do usuário
+--------------------------Ex---------------------------------------------------
+igor@igor-PC:/proc$ cd ~
+igor@igor-PC:~$ 
+*******************************************************************************
+
+
+cd - -> Muda para o diretório anterior (que estava antes)
+--------------------------Ex---------------------------------------------------
+igor@igor-PC:~$ cd -
+/proc
+igor@igor-PC:/proc$ 
+*******************************************************************************
+
+
+pwd -> Mostra o caminho completo para o diretório atual
+-------------------------Ex----------------------------------------------------
+igor@igor-PC:~$ pwd
+/home/igor
+*******************************************************************************
+
+
+mkdir -> (make dir) Cria um diretório
+------------------------Ex-----------------------------------------------------
+igor@igor-PC:~/Downloads$ mkdir teste
+igor@igor-PC:~/Downloads$ ls
+teste
+*******************************************************************************
+
+
+rm -> (remove) Excluí arquivo
+------------------------Ex-----------------------------------------------------
+igor@igor-PC:~/Downloads$ ls
+dir_cheio  dir_vazio  doc
+igor@igor-PC:~/Downloads$ rm doc
+igor@igor-PC:~/Downloads$ ls
+dir_cheio  dir_vazio
+*******************************************************************************
+
+
+rm -r -> (recursive) Remove diretório e tudo dentro dele
+-----------------------Ex------------------------------------------------------
+igor@igor-PC:~/Downloads$ ls
+dir_cheio  dir_vazio
+igor@igor-PC:~/Downloads$ rm -r dir_vazio
+igor@igor-PC:~/Downloads$ rm -r dir_cheio
+igor@igor-PC:~/Downloads$ ls
+igor@igor-PC:~/Downloads$ 
+********************************************************************************
+
+
+rm -f -> (force) Força a remoção de arquivo
+********************************************************************************
+
+
+rm -rf -> Força a remoção de diretório
+OBS: Podemos concatenar flags
+********************************************************************************
+
+
+cp -> Copia arquivos ou diretórios
+--------------------------------Ex----------------------------------------------
+igor@igor-PC:~/Downloads$ ls
+doc
+igor@igor-PC:~/Downloads$ cp doc doc2
+igor@igor-PC:~/Downloads$ ls
+doc  doc2
+********************************************************************************
+
+
+mv -> Move um arquivo ou diretório para outro (possível usar para renomear)
+--------------------------------Ex----------------------------------------------
+igor@igor-PC:~/Downloads$ ls
+doc  doc2
+igor@igor-PC:~/Downloads$ mv doc2 doc10
+igor@igor-PC:~/Downloads$ ls
+doc  doc10
+
+
+touch -> Cria novo arquivo
+--------------------------------Ex-----------------------------------------------
+igor@igor-PC:~/Downloads$ ls
+doc  doc10
+igor@igor-PC:~/Downloads$ touch novo.txt
+igor@igor-PC:~/Downloads$ ls
+doc  doc10  novo.txt
+igor@igor-PC:~/Downloads$
+*********************************************************************************
+
+
+cat -> Ler conteúdo de arquivo
+---------------------------------Ex----------------------------------------------
+igor@igor-PC:~/Downloads$ cat doc
+asdasdasdigor@igor-PC:~/Downloads$ 
+*********************************************************************************
+
+
+cat > -> Ler conteúdo de arquivo e colocar em outro arquivo (sobrescreve tudo)
+---------------------------------Ex----------------------------------------------
+igor@igor-PC:~/Downloads$ ls
+doc  doc10  novo.txt
+igor@igor-PC:~/Downloads$ cat doc
+asdasdasdigor@igor-PC:~/Downloads$ cat novo.txt
+igor@igor-PC:~/Downloads$ cat doc > novo.txt
+igor@igor-PC:~/Downloads$ cat novo.txt
+asdasdasdigor@igor-PC:~/Downloads$ 
+*********************************************************************************
+
+
+
+cat >> -> Ler conteúdo de arquivo e colocar em outro arquivo (adc. ao final)
+---------------------------------Ex----------------------------------------------
+igor@igor-PC:~/Downloads$ ls
+doc  doc10  novo.txt
+igor@igor-PC:~/Downloads$ cat doc
+asdasdasdigor@igor-PC:~/Downloads$ cat doc10
+asdasdasdigor@igor-PC:~/Downloads$ cat doc >> doc10
+igor@igor-PC:~/Downloads$ cat doc10
+asdasdasdasdasdasdigor@igor-PC:~/Downloads$
+*********************************************************************************
+
+
+Adicionando string literal ao final de arquivo
+-----------------------------------Ex--------------------------------------------
+igor@igor-PC:~/Downloads$ echo "linux" >> doc
+igor@igor-PC:~/Downloads$ cat doc
+asdasdasdlinux
+*********************************************************************************
+
+
+tail -> mostra 10 últimas linhas de arquivo
+-----------------------------------Ex--------------------------------------------
+igor@igor-PC:~/Downloads$ cat doc
+1
+2
+3
+4
+.
+.
+.
+23
+24
+25igor@igor-PC:~/Downloads$ tail doc
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25igor@igor-PC:~/Downloads$ 
+**********************************************************************************
+
+
+head -> mostra 10 primeiras linhas de arquivo
+-----------------------------------Ex--------------------------------------------
+igor@igor-PC:~/Downloads$ head doc
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+**********************************************************************************
+
+
+head -n -> Mostra as n primeiras linhas
+OBS: Mesmo para tail
+---------------------------------Ex-----------------------------------------------
+igor@igor-PC:~/Downloads$ head n -3 doc
+1
+2
+3
+igor@igor-PC:~/Downloads$ tail n -3 doc
+23
+24
+25igor@igor-PC:~/Downloads$ 
+***********************************************************************************
+
+
+tail -f -> Mostra os 10 últimos e fica aguardando, sempre que algo novo é colocado,
+mostra no terminal.
+***********************************************************************************
+
+
+Ctrl-C -> Para um comando em execução
+***********************************************************************************
+
+
+
+
+
+
+
+
+
+
+
+
+

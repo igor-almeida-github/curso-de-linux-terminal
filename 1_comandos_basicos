@@ -1,0 +1,47 @@
+Elementos que aparecem no terminal: 
+igor@igor-PC:~$
+root@igor-PC:/home/igor#
+-----------------------------------------------------------------------------------------------------
+usuário |logado em | nome do PC  |terminal aberto em | diretório                    | Tipo de usuário
+  igor  |    @     |  igor-PC    |          :        | ~ (pasta pessoal do próprio) |     $ (comum)
+  root  |    @     |  igor-PC    |          :        |          /home/igor          |     # (super)
+*****************************************************************************************************
+
+
+ls -> Lista conteúdo do diretório atual ou o que for informada
+---------------------------EX--------------------------------------------------------------
+igor@igor-PC:~$ ls
+'Área de Trabalho'   Documentos   Downloads   Imagens   Modelos   Música   Público   Vídeos 
+---------------------------EX--------------------------------------------------------------
+igor@igor-PC:~$ ls Documentos
+Linux
+*******************************************************************************************
+
+
+sudo -> (super user do) Executar comandos como super usuário root
+sudo su -> Acessar como super usuário
+----------------------------EX-----------------------------------
+igor@igor-PC:~$ sudo su
+[sudo] senha para igor:
+root@igor-PC:/home/igor#
+*****************************************************************
+
+
+Ctrl-D -> Deslogar do usuário root
+OBS: Fecha o terminal caso não esteja logado no root
+----------------------------EX-----------------------------------
+root@igor-PC:/home/igor# exit
+igor@igor-PC:~$
+*****************************************************************
+
+
+clear -> Limpa o terminal
+*******************************************************************
+
+
+Ctrl-L -> Move a visão do terminal para esconder tudo que está nele
+*******************************************************************
+
+
+
+

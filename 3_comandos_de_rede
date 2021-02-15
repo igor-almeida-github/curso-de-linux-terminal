@@ -1,0 +1,116 @@
+ping -> testa a conexão com site
+-------------------------Ex-------------------------
+igor@igor-PC:~$ ping www.google.com
+PING www.google.com (216.58.222.100) 56(84) bytes of data.
+64 bytes from rio01s16-in-f4.1e100.net (216.58.222.100): icmp_seq=1 ttl=117 time=24.9 ms
+64 bytes from rio01s16-in-f4.1e100.net (216.58.222.100): icmp_seq=2 ttl=117 time=25.6 ms
+64 bytes from rio01s16-in-f4.1e100.net (216.58.222.100): icmp_seq=3 ttl=117 time=179 ms
+*******************************************************************************************
+
+
+whois -> Trás informações sobre website
+*******************************************************************************************
+
+
+dig -> DNS
+----------------------------------Ex-------------------------------------------------------
+igor@igor-PC:~$ dig www.udemy.com
+
+; <<>> DiG 9.16.1-Ubuntu <<>> www.udemy.com
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 30165
+;; flags: qr rd ra; QUERY: 1, ANSWER: 2, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 65494
+;; QUESTION SECTION:
+;www.udemy.com.			IN	A
+
+;; ANSWER SECTION:
+www.udemy.com.		288	IN	A	104.16.66.85
+www.udemy.com.		288	IN	A	104.16.65.85
+
+;; Query time: 0 msec
+;; SERVER: 127.0.0.53#53(127.0.0.53)
+;; WHEN: dom jan 24 23:56:46 -03 2021
+;; MSG SIZE  rcvd: 74
+*******************************************************************************************
+
+
+dig -x -> Entre outras coisas, trás o reverso do domínio
+-----------------------------------Ex------------------------------------------------------
+igor@igor-PC:~$ dig -x www.udemy.com
+
+; <<>> DiG 9.16.1-Ubuntu <<>> -x www.udemy.com
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NXDOMAIN, id: 57531
+;; flags: qr rd ra; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 65494
+;; QUESTION SECTION:
+;com.udemy.www.in-addr.arpa.	IN	PTR
+
+;; Query time: 44 msec
+;; SERVER: 127.0.0.53#53(127.0.0.53)
+;; WHEN: seg jan 25 00:00:41 -03 2021
+;; MSG SIZE  rcvd: 55
+*******************************************************************************************
+
+
+wget -> Faz download do arquivo de link
+---------------------------------Ex--------------------------------------------------------
+igor@igor-PC:~/Downloads$ wget https://img-a.udemycdn.com/user/200_H/40434116_9c82_2.jpg?t8xZhRWCircWEYOYqh67k2fNvLoERtfgVg8qbWS8n1YwqlrEIbbnphc7-8NJ_nbtDIQn6Cs8pspTeuhwOD7o5y29NB47UebgoNZN2ttS6M56g54huGtmS2Pfr3OR
+The name is too long, 144 chars total.
+Trying to shorten...
+New name is 40434116_9c82_2.jpg?t8xZhRWCircWEYOYqh67k2fNvLoERtfgVg8qbWS8n1YwqlrEIbbnphc7-8NJ_nbtDIQn6Cs8pspTeuhwOD7o5y29NB47UebgoNZN2ttS.
+--2021-01-25 00:05:43--  https://img-a.udemycdn.com/user/200_H/40434116_9c82_2.jpg?t8xZhRWCircWEYOYqh67k2fNvLoERtfgVg8qbWS8n1YwqlrEIbbnphc7-8NJ_nbtDIQn6Cs8pspTeuhwOD7o5y29NB47UebgoNZN2ttS6M56g54huGtmS2Pfr3OR
+Resolvendo img-a.udemycdn.com (img-a.udemycdn.com)... 152.199.55.44
+Conectando-se a img-a.udemycdn.com (img-a.udemycdn.com)|152.199.55.44|:443... conectado.
+A requisição HTTP foi enviada, aguardando resposta... 200 OK
+Tamanho: 11432 (11K) [image/jpeg]
+Salvando em: “40434116_9c82_2.jpg?t8xZhRWCircWEYOYqh67k2fNvLoERtfgVg8qbWS8n1YwqlrEIbbnphc7-8NJ_nbtDIQn6Cs8pspTeuhwOD7o5y29NB47UebgoNZN2ttS”
+
+40434116_9c82_2.jpg?t8xZhR 100%[=======================================>]  11,16K  --.-KB/s    em 0,002s  
+
+2021-01-25 00:05:43 (5,75 MB/s) - “40434116_9c82_2.jpg?t8xZhRWCircWEYOYqh67k2fNvLoERtfgVg8qbWS8n1YwqlrEIbbnphc7-8NJ_nbtDIQn6Cs8pspTeuhwOD7o5y29NB47UebgoNZN2ttS” salvo [11432/11432]
+**********************************************************************************************************
+
+
+wget -c -> Permite continuar download depois caso algum problema ocorra durante o processo
+**********************************************************************************************************
+
+
+wget -r -> Faz download recursivamente
+**********************************************************************************************************
+
+
+curl -> Lê o código fonte da pagina
+**********************************************************************************************************
+
+
+curl -o -> Copia o html da página e cola em arquivo
+-------------------------Ex-------------------------------------------------------------------------------
+igor@igor-PC:~/Downloads$ curl -o udemy.html www.udemy.com
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
